@@ -1,60 +1,182 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Elegant Dress Showroom</title>
-<link rel="stylesheet" href="style.css">
-</head>
+:root{
+--cream:#f7f4ef;
+--gold:#c6a75c;
+--charcoal:#2b2b2b;
+}
 
-<body>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia,serif;
+}
 
-<header>
-<h1>Elegant Dress Showroom</h1>
-<p>Latest Fashion Collection</p>
-</header>
+body{
+background:var(--cream);
+color:var(--charcoal);
+}
 
-<nav>
-<a href="#home">Home</a>
-<a href="#collection">Collection</a>
-<a href="#contact">Contact</a>
-</nav>
 
-<section id="home">
-<h2>Welcome to Our Showroom</h2>
-<p>Discover beautiful dresses for every occasion.</p>
-</section>
+/* HEADER */
 
-<section id="collection">
-<h2>Our Dresses</h2>
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:white;
+position:sticky;
+top:0;
+z-index:999;
+}
 
-<div class="dress">
-<img src="https://via.placeholder.com/250">
-<h3>Party Dress</h3>
-<p>₹2999</p>
-</div>
+.logo{
+font-size:22px;
+letter-spacing:2px;
+}
 
-<div class="dress">
-<img src="https://via.placeholder.com/250">
-<h3>Wedding Gown</h3>
-<p>₹7999</p>
-</div>
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:var(--charcoal);
+}
 
-<div class="dress">
-<img src="https://via.placeholder.com/250">
-<h3>Casual Dress</h3>
-<p>₹1499</p>
-</div>
+nav a:hover{
+color:var(--gold);
+}
 
-</section>
 
-<section id="contact">
-<h2>Contact Us</h2>
-<p>Email: showroom@email.com</p>
-<p>Phone: +91 9876543210</p>
-</section>
+/* HERO */
 
-<footer>
-<p>© 2026 Elegant Dress Showroom</p>
-</footer>
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+background-size:cover;
+background-position:center;
+transition:1s;
+}
 
-</body>
-</html>
+.hero-text h1{
+font-size:55px;
+}
+
+.hero-text p{
+margin-top:10px;
+}
+
+
+/* FILTER */
+
+.filters{
+text-align:center;
+padding:50px;
+}
+
+.filters button{
+padding:10px 20px;
+margin:10px;
+border:none;
+background:var(--charcoal);
+color:white;
+cursor:pointer;
+}
+
+.filters button:hover{
+background:var(--gold);
+}
+
+
+/* PRODUCTS */
+
+.products{
+padding:40px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:30px;
+}
+
+.product{
+background:white;
+padding:15px;
+text-align:center;
+transition:0.3s;
+}
+
+.product img{
+width:100%;
+transition:0.4s;
+}
+
+.product:hover img{
+transform:scale(1.08);
+}
+
+.price{
+color:var(--gold);
+}
+
+.product button{
+margin-top:10px;
+padding:8px 15px;
+border:none;
+background:var(--gold);
+color:white;
+cursor:pointer;
+}
+
+
+/* CART */
+
+.cart{
+position:fixed;
+bottom:20px;
+right:20px;
+background:var(--charcoal);
+color:white;
+padding:15px;
+border-radius:8px;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:30px;
+text-decoration:none;
+}
+
+
+/* FOOTER */
+
+footer{
+text-align:center;
+background:var(--charcoal);
+color:#ccc;
+padding:40px;
+margin-top:50px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-text h1{
+font-size:38px;
+}
+
+nav{
+display:none;
+}
+
+}
