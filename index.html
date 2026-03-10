@@ -1,60 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Elegant Dress Showroom</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Velvet Vows Boutique</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
-<h1>Elegant Dress Showroom</h1>
-<p>Latest Fashion Collection</p>
-</header>
+
+<div class="logo">Velvet Vows</div>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#collection">Collection</a>
-<a href="#contact">Contact</a>
+<a href="#hero">Home</a>
+<a href="#shop">Shop</a>
+<a href="#footer">Contact</a>
 </nav>
 
-<section id="home">
-<h2>Welcome to Our Showroom</h2>
-<p>Discover beautiful dresses for every occasion.</p>
-</section>
+</header>
 
-<section id="collection">
-<h2>Our Dresses</h2>
 
-<div class="dress">
-<img src="https://via.placeholder.com/250">
-<h3>Party Dress</h3>
-<p>₹2999</p>
-</div>
+<!-- HERO SECTION -->
 
-<div class="dress">
-<img src="https://via.placeholder.com/250">
-<h3>Wedding Gown</h3>
-<p>₹7999</p>
-</div>
+<section class="hero" id="hero">
 
-<div class="dress">
-<img src="https://via.placeholder.com/250">
-<h3>Casual Dress</h3>
-<p>₹1499</p>
+<div class="hero-text">
+
+<h1>Elegance in Every Stitch</h1>
+<p>Luxury Dresses Crafted for Timeless Moments</p>
+
 </div>
 
 </section>
 
-<section id="contact">
-<h2>Contact Us</h2>
-<p>Email: showroom@email.com</p>
-<p>Phone: +91 9876543210</p>
+
+
+<!-- CATEGORY FILTER -->
+
+<section class="filters">
+
+<button onclick="filterProducts('all')">All</button>
+<button onclick="filterProducts('maxi')">Maxi</button>
+<button onclick="filterProducts('cocktail')">Cocktail</button>
+<button onclick="filterProducts('casual')">Casual</button>
+<button onclick="filterProducts('evening')">Evening</button>
+
 </section>
 
-<footer>
-<p>© 2026 Elegant Dress Showroom</p>
+
+
+<!-- PRODUCTS -->
+
+<section class="products" id="shop">
+
+
+<div class="product maxi">
+
+<!-- photo idea: pastel flowing maxi dress outdoor -->
+
+<img src="https://via.placeholder.com/300x400">
+
+<h3>Floral Maxi Dress</h3>
+<p class="price">$150</p>
+
+<button onclick="addCart()">Add to Cart</button>
+
+</div>
+
+
+
+<div class="product cocktail">
+
+<!-- photo idea: champagne satin cocktail dress studio -->
+
+<img src="https://via.placeholder.com/300x400">
+
+<h3>Champagne Cocktail Dress</h3>
+<p class="price">$190</p>
+
+<button onclick="addCart()">Add to Cart</button>
+
+</div>
+
+
+
+<div class="product casual">
+
+<!-- photo idea: light summer casual dress -->
+
+<img src="https://via.placeholder.com/300x400">
+
+<h3>Summer Casual Dress</h3>
+<p class="price">$120</p>
+
+<button onclick="addCart()">Add to Cart</button>
+
+</div>
+
+
+
+<div class="product evening">
+
+<!-- photo idea: black velvet evening gown dramatic lighting -->
+
+<img src="https://via.placeholder.com/300x400">
+
+<h3>Velvet Evening Gown</h3>
+<p class="price">$260</p>
+
+<button onclick="addCart()">Add to Cart</button>
+
+</div>
+
+</section>
+
+
+
+<!-- CART -->
+
+<div class="cart">
+
+🛒 Cart: <span id="cart">0</span>
+
+</div>
+
+
+
+<!-- WHATSAPP ORDER BUTTON -->
+
+<a class="whatsapp"
+href="https://wa.me/919876543210"
+target="_blank">
+
+Order on WhatsApp
+
+</a>
+
+
+
+<footer id="footer">
+
+<h2>Velvet Vows</h2>
+
+<p>Luxury Fashion Boutique</p>
+
+<p>© 2026 Velvet Vows</p>
+
 </footer>
+
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
